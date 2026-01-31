@@ -15,6 +15,11 @@ h1 {
     margin: 20px 0;
 }
 
+h2 {
+    background-color: #e6e1cc;
+    padding: 20px;
+}
+
 .top-nav {
     text-align: center;
     margin-bottom: 10px;

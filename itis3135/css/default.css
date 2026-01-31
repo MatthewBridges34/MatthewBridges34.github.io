@@ -9,6 +9,15 @@ body {
     padding: 10px;
 }
 
+.top-nav {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.top-nav a {
+    margin: 0 5px;
+}
+
 h1 {
     text-align: center;
     margin: 20px 0;

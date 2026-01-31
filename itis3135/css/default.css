@@ -10,12 +10,12 @@ body {
 }
 
 
-h1 {
+.h1 {
     text-align: center;
     margin: 20px 0;
 }
 
-h2 {
+.h2 {
     background-color: #e6e1cc;
     padding: 20px;
 }

@@ -19,11 +19,12 @@ body {
     background-color: #e6e1cc;
     margin: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .top-nav {
     text-align: center;
-    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .top-nav a {
@@ -58,7 +59,7 @@ body {
 
 footer {    
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: #2f4f3e;
     margin-top: 20px;
     color: white;

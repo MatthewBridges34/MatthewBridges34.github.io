@@ -19,7 +19,7 @@ h1 {
     background-color: #e6e1cc;
 }
 
-.welcome-message h2 {
+.welcome-message {
     margin: 0;
 }
 
@@ -29,7 +29,7 @@ h1 {
     padding: 10px;
 }
 
-.links h3 {
+.links {
     margin: 0 0 5px 0;
 }
 

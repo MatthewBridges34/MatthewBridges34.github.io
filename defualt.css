@@ -38,8 +38,5 @@ footer {
     text-align: center;
     padding: 10px;
     background-color: #2f4f3e;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 30px;
 }

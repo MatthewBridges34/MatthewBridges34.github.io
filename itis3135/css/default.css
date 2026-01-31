@@ -15,9 +15,10 @@ h1 {
     margin: 20px 0;
 }
 
-h2 {
+.section-title {
     background-color: #e6e1cc;
     margin: 20px;
+    padding: 10px;
 }
 
 .top-nav {
@@ -55,10 +56,10 @@ h2 {
     margin-right: 10px;
 }
 
-footer {
+footer {    
     text-align: center;
-    padding: 50px;
+    padding: 10px;
     background-color: #2f4f3e;
-    margin-top: 30px;
+    margin-top: 10px;
     color: white;
 }

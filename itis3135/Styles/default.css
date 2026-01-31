@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccd1e6;
+}
+
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.weclome-message {
+    padding: 20px;
+    background-color: #e6e1cc;
+}
+
+.weclome-message h2 {
+    margin: 0;
+}
+
+.links {
+    background-color: #2f4f3e;
+    color: white;
+    padding: 10px;
+}
+
+.links h3 {
+    margin: 0 0 5px 0;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2f4f3e;
+    margin-top: 30px;
+}

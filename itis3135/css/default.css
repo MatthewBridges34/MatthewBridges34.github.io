@@ -33,8 +33,12 @@ body {
 }
 
 .itis-element {
-    text-align: center;
-    background-color: #e6e1cd;
+    text-align: center;;
+}
+
+.itis3135-course {
+    margin: 20px;
+    background-color: #e6e1cc;
 }
 
 

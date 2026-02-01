@@ -88,6 +88,8 @@ body {
 
 footer {    
     text-align: center;
+    padding: 10px;
     background-color: #2f4f3e;
+    margin-top: 20px;
     color: white;
 }

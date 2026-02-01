@@ -11,8 +11,8 @@ body {
 
 .itis-element {
     text-align: center;
-    margin: 20px 0;
-    background-color: #e6e1cc;
+    margin: 40px 0;
+    background-color: #e6e1cd;
 }
 
 
@@ -23,8 +23,7 @@ body {
 
 .section-title {
     background-color: #e6e1cc;
-    margin: 20px;
-    padding: 10px;
+    margin: 40px;
     text-align: center;
 }
 

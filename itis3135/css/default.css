@@ -9,6 +9,14 @@ body {
     background-color: #ccd1e6;
 }
 
+figure {
+    text-align: center;
+}
+
+.introduction-element {
+    text-align: center;
+}
+
 .test-element {
     text-align: center;
     background-color: #e6e1cc;

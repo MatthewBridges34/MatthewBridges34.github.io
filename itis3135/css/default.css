@@ -4,6 +4,10 @@ body {
     background-color: #ccd1e6;
 }
 
+.eval-element {
+    text-align: center;
+    background-color: #e6e1cc;
+
 .top-links {
     text-align: center;
     padding: 10px;

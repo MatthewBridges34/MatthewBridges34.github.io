@@ -43,6 +43,12 @@ body {
     margin: 0;
 }
 
+.personal-links {
+    padding: 10px;
+    background-color: #2f4f3e;
+    color: white;
+}
+
 .links {
     background-color: #2f4f3e;
     color: white;

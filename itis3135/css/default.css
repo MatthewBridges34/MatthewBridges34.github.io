@@ -7,6 +7,12 @@ body {
 .eval-element {
     text-align: center;
     background-color: #e6e1cc;
+}
+
+.f5-web {
+    text-align: left;
+    background-color: #e6e1cb;
+}
 
 .top-links {
     text-align: center;

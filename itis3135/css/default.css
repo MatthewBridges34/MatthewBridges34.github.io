@@ -21,10 +21,12 @@ body {
 
 .crap-test {
     text-align: left;
+    margin: 20px 0;
 }
 
 .f5-web {
     text-align: left;
+    margin: 20px 0;
 }
 
 .top-links {
@@ -34,6 +36,7 @@ body {
 
 .itis-element {
     text-align: center;;
+    margin: 20px 0;
 }
 
 .itis3135-course {
@@ -42,12 +45,19 @@ body {
 
 .itis-description {
     text-align: left;
+    margin : 20px 0;
 
 }
 
 
 .Land-page {
     text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-message {
+    padding: 20px;  
+    background-color: #e6e1cc;
     margin: 20px 0;
 }
 
@@ -78,6 +88,7 @@ body {
     background-color: #2f4f3e;
     color: white;
     text-align: left;
+    margin: 20px 0;
 }
 
 .links {
@@ -100,6 +111,6 @@ footer {
     text-align: left;
     padding: 10px;
     background-color: #2f4f3e;
-    margin-top: 20px;
+    margin: 20px 0;
     color: white;
 }

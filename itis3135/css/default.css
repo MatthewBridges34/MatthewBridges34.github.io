@@ -7,124 +7,45 @@
 header {
     text-align: center;
     color:black;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #ccd1e6;
+    background-color: antiquewhite;
+    font-family:'Times New Roman', Times, serif;
 }
 
 figure {
     text-align: center;
 }
 
-.introduction-element {
-    text-align: center;
-}
-
-.test-element {
-    text-align: center;
-    background-color: #e6e1cc;
-}
-
-.test-page {
-    text-align: left;
-    margin: 20px 0;
-}      
-
-.crap-test {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.f5-web {
-    text-align: left;
-    margin: 20px 0;
-}
-
-.top-links {
-    text-align: center;
-    padding: 10px;
-}
-
-.itis-element {
-    text-align: center;;
-    margin: 20px 0;
-}
-
-.itis3135-course {
-    background-color: #e6e1cc;
-}
-
-.itis-description {
-    text-align: left;
-    margin : 20px 0;
+h1 {
+    font-family:'Roboto', sans-serif;
 
 }
 
-
-.Land-page {
-    text-align: center;
-    margin: 20px 0;
+main {
+    background-color: whitesmoke;
+    font-family: 'roboto', sans-serif;
+    color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 400;
 }
 
-.welcome-message {
-    padding: 20px;  
-    background-color: #e6e1cc;
-    margin: 20px 0;
+h2 {
+    font-family: 'Roboto', sans-serif;
 }
 
-.section-title {
-    background-color: #e6e1cc;
-    text-align: center;
+p {
+    text-indent: 40px;
 }
 
-.top-nav {
-    text-align: center;
-    padding: 10px;
-}
-
-.top-nav a {
-    margin: 0 5px;
-}
-
-.welcome-message {
-    padding: 20px;
-    background-color: #e6e1cc;
-}
-
-.welcome-message {
-    margin: 0;
-}
-
-.personal-links {
-    background-color: #2f4f3e;
-    color: white;
-    text-align: left;
-    margin: 20px 0;
-}
-
-.links {
-    background-color: #2f4f3e;
-    color: white;
-    padding: 10px;
-}
-
-.links {
-    padding: 10px;
+footer {
+    background-color: #32533D;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-right: 10px;
     color:white;
+    height: 100vw;
 }
 
-.links a {
-    color: white;
-    margin-right: 20px;
-}
-
-footer {    
-    text-align: left;
-    padding: 10px;
-    background-color: #2f4f3e;
-    margin: 20px 0;
+.footer-link-color a {
     color: white;
 }

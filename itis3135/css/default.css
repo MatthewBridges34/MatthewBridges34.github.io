@@ -23,6 +23,10 @@ figure {
     text-align: center;
 }
 
+figcaption {
+    font-style: italic;
+}
+
 h1 {
     font-family:'Roboto', sans-serif;
 
@@ -43,7 +47,7 @@ h2 {
 }
 
 p {
-    text-indent: 40px;
+    text-indent: 20px;
 }
 
 footer {

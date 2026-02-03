@@ -69,3 +69,9 @@ footer {
 .validate-link {
     text-align: center;
 }
+
+.titleline {
+    margin: 0.25px 0 0.75px;
+    font-style:italic;
+    font-weight: normal;
+}

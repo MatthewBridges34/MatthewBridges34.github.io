@@ -13,11 +13,14 @@ body {
 }
 
 header {
-    text-align: center;
+    background-color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-right: 10px;
     color:black;
-    background-color: antiquewhite;
-    font-family:'Times New Roman', Times, serif;
-    
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 header a {

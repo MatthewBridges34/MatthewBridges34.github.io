@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    box-sizing:border-box;
+    line-height: 1.5;
+}
+
+body {
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    color:black;
+    background-color: antiquewhite;
+    font-family:'Times New Roman', Times, serif;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+h1 {
+    font-family:'Roboto', sans-serif;
+
+}
+
+main {
+    background-color: whitesmoke;
+    font-family: 'roboto', sans-serif;
+    color:black;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align:center;
+}
+
+p {
+    text-indent: 20px;
+}
+
+footer {
+    background-color: #32533D;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    color:white;
+    height: 100vw;
+}
+
+.footer-link-color a {
+    color: white;
+}
+.footer-link-style {
+    text-color: white;
+}
+
+.validate-link {
+    text-align: left;
+}
+
+.titleline {
+    margin: 0.25px 0 0.75px;
+    font-style:italic;
+    font-weight: normal;
+}

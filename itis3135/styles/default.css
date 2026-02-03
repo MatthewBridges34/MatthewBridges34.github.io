@@ -17,6 +17,7 @@ header {
     color:black;
     background-color: antiquewhite;
     font-family:'Times New Roman', Times, serif;
+    
 }
 
 figure {
@@ -70,6 +71,7 @@ footer {
     padding-right: 10px;
     color:white;
     height: 100vw;
+    text-color: white;
 }
 
 .footer-link-color a {

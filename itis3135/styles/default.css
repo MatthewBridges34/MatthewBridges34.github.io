@@ -20,6 +20,11 @@ header {
     
 }
 
+header a {
+    color:black;
+    text-align: center;
+}
+
 figure {
     text-align: center;
 }

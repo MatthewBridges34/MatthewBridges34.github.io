@@ -70,10 +70,11 @@ h2 {
 }
 
 h3 {
-    color:white;
+    color:black;
     font-family:Georgia, 'Times New Roman', Times, serif;
     text-align:left;
     margin-left: 20px;
+    padding: 10px;
 }
 
 h3 a {

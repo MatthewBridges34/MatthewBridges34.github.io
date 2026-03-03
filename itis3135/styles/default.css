@@ -127,18 +127,18 @@ footer {
 }
 
 /* Requirement 8:
-   Attribute selectors for row background colors */
+   Simpler selectors for row background colors */
 
-tr[class="read"] {
-  background-color: #e8f5e9; /* light green */
+.read {
+  background-color: #e8f5e9;
 }
 
-tr[class="to-read"] {
-  background-color: #fff8e1; /* light yellow */
+.to-read {
+  background-color: #fff8e1;
 }
 
-tr[class="in-progress"] {
-  background-color: #e3f2fd; /* light blue */
+.in-progress {
+  background-color: #e3f2fd;
 }
 
 
@@ -150,38 +150,30 @@ span {
 }
 
 
-/* Requirement 10:
-   Status styling for to-read */
+/* Requirement 10–12:
+   Status styling based on row */
 
-tr[class="to-read"] span[class="status"] {
+.to-read .status {
   border: 1px solid #ff9800;
   background-color: #ffe0b2;
 }
 
-
-/* Requirement 11:
-   Status styling for read */
-
-tr[class="read"] span[class="status"] {
+.read .status {
   border: 1px solid #2e7d32;
   background-color: #c8e6c9;
 }
 
-
-/* Requirement 12:
-   Status styling for in-progress */
-
-tr[class="in-progress"] span[class="status"] {
+.in-progress .status {
   border: 1px solid #1565c0;
   background-color: #bbdefb;
 }
 
 
 /* Requirement 13:
-   Target status + rate spans */
+   Status and rate container sizing */
 
-span[class="status"],
-span[class^="rate"] {
+.status,
+.rate {
   height: 25px;
   width: 80px;
   padding: 5px;
@@ -191,7 +183,7 @@ span[class^="rate"] {
 /* Requirement 14:
    Rating circles */
 
-span[class^="rate"] > span {
+.rate > span {
   border: 1px solid #333;
   border-radius: 50%;
   margin: 2px;
@@ -201,22 +193,19 @@ span[class^="rate"] > span {
 }
 
 
-/* 15:*/
-
-span[class~="one"] span:first-child {
+/* Requirement 15 */
+.rate.one span:first-child {
   background-color: gold;
 }
 
 
-/*16:*/
-
-span[class~="two"] span:nth-child(-n+2) {
+/* Requirement 16 */
+.rate.two span:nth-child(-n+2) {
   background-color: gold;
 }
 
 
-/* 17: */
-
-span[class~="three"] span {
+/* Requirement 17 */
+.rate.three span {
   background-color: gold;
 }

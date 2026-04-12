@@ -230,3 +230,32 @@ ul {
 ul li {
     margin-bottom: 0.75rem;
 }
+
+.journalism-example-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.example-card {
+    background-color: #f8f5ef;
+    border-left: 5px solid #476c4d;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.example-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #476c4d;
+}
+
+.example-card p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .journalism-example-list {
+        grid-template-columns: 1fr;
+    }
+}

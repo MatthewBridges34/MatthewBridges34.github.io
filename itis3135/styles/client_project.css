@@ -148,7 +148,7 @@ footer p {
 .landing-hero {
     position: relative;
     min-height: 500px;
-    background-image: url("../images/flower-placeholder.jpg");
+    background-color: #cfdcc8;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -298,3 +298,12 @@ ul li {
     text-align: center;
     padding: 1rem;
 }
+
+.gallery-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    display: block;
+}

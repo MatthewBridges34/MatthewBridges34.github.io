@@ -1,0 +1,64 @@
+.client-project-page {
+    padding: 20px;
+}
+
+.hero {
+    background-color: #f8ecef;
+    border: 1px solid #d8b7c0;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 12px;
+    color: #5a2d3b;
+}
+
+.hero-text {
+    max-width: 750px;
+    margin: 0 auto;
+    text-indent: 0;
+}
+
+.content-card {
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.content-card h3 {
+    margin: 0 0 10px 0;
+    padding: 0;
+    color: #5a2d3b;
+}
+
+.page-list,
+.feature-list {
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+.page-list li,
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+.content-card p {
+    text-indent: 0;
+}
+
+@media (max-width: 768px) {
+    .client-project-page {
+        padding: 12px;
+    }
+
+    .hero,
+    .content-card {
+        padding: 16px;
+    }
+}

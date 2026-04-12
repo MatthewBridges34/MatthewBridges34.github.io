@@ -142,3 +142,16 @@ footer p {
         padding: 1rem;
     }
 }
+
+.card h4 {
+    margin-top: 0;
+    color: #476c4d;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+}

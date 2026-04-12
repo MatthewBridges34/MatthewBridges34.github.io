@@ -1,3 +1,4 @@
+/* Base page layout and typography for the Petal Path client project */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -80,6 +81,7 @@ img {
     border-radius: 8px;
 }
 
+/* Shared button styling used across multiple pages */
 .button-link,
 button {
     display: inline-block;
@@ -112,6 +114,7 @@ footer p {
     margin: 0.3rem 0;
 }
 
+/* Grid and card styles used for page content and flower sections */
 .flower-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -128,27 +131,10 @@ footer p {
     text-align: center;
 }
 
-
-
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .client-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    main {
-        padding: 1rem;
-    }
-}
-
 .landing-hero {
     position: relative;
     min-height: 500px;
-    background-color: #cfdcc8;
+    background-image: none;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +147,6 @@ footer p {
 }
 
 .hero-overlay {
-    width: 100%;
     min-height: 500px;
     background-color: rgba(0, 0, 0, 0.35);
     color: #ffffff;
@@ -203,32 +188,37 @@ footer p {
     color: #476c4d;
 }
 
-@media (max-width: 768px) {
-    .landing-hero,
-    .hero-overlay {
-        min-height: 380px;
-    }
-
-    .hero-overlay h2 {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-}
-
-.card h4 {
-    margin-top: 0;
-    color: #476c4d;
-}
-
 ul {
     padding-left: 1.5rem;
 }
 
 ul li {
     margin-bottom: 0.75rem;
+}
+
+/* Styling specific to the meanings and journalism pages */
+.meaning-card h4,
+.color-card h4,
+.example-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #476c4d;
+}
+
+.meaning-label {
+    font-weight: bold;
+    color: #2f2f2f;
+    margin-bottom: 0.35rem;
+}
+
+.color-card {
+    text-align: center;
+}
+
+.color-card p,
+.example-card p,
+.gallery-card p {
+    margin-bottom: 0;
 }
 
 .journalism-example-list {
@@ -244,22 +234,7 @@ ul li {
     padding: 1rem;
 }
 
-.example-card h4 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #476c4d;
-}
-
-.example-card p {
-    margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-    .journalism-example-list {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Gallery page layout and image styling */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -272,6 +247,8 @@ ul li {
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery-card h4 {
@@ -280,30 +257,44 @@ ul li {
     color: #476c4d;
 }
 
-.gallery-card p {
-    margin-bottom: 0;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: 220px;
-    background-color: #d9e4d4;
-    color: #476c4d;
-    border: 2px dashed #476c4d;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem;
-}
-
 .gallery-card img {
     width: 100%;
-    height: 260px;
+    height: 250px;
     object-fit: cover;
     object-position: center;
     border-radius: 8px;
     display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .client-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .landing-hero,
+    .hero-overlay {
+        min-height: 380px;
+    }
+
+    .hero-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .journalism-example-list {
+        grid-template-columns: 1fr;
+    }
 }

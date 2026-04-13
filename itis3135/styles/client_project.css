@@ -298,3 +298,33 @@ ul li {
         grid-template-columns: 1fr;
     }
 }
+
+/*Featured image section for the identify page */
+.feature-image-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.feature-image-section img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+}
+
+/*featured image section for the meanings page */
+.feature-image-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.feature-image-section img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+}

@@ -191,7 +191,7 @@ ul li {
     margin-bottom: 0.75rem;
 }
  
-/* Consolidated h4 heading styles — defined once to satisfy validator */
+/* Consolidated h4 heading styles - defined once to satisfy validator */
 .card h4,
 .meaning-card h4,
 .color-card h4,
@@ -317,3 +317,4 @@ ul li {
     border: 0;
     clip: rect(0, 0, 0, 0);
 }
+ 

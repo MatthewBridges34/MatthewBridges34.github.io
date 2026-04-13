@@ -118,9 +118,8 @@ footer p {
 .flower-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap: 1rem;
+    gap: 1rem;
 }
-
 .card {
     background-color: #f3efe8;
     border-radius: 8px;
@@ -238,7 +237,7 @@ ul li {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-gap: 1.5rem;
+    gap: 1.5rem;
 }
 
 .gallery-card {

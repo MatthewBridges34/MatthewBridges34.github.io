@@ -118,7 +118,8 @@ footer p {
 .flower-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    grid-gap: 16px;
+    -webkit-gap: 16px;
+    gap: 16px;
 }
 
 .card {
@@ -238,7 +239,8 @@ ul li {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-gap: 24px;
+    -webkit-gap: 24px;
+    gap: 24px;
 }
 
 .gallery-card {

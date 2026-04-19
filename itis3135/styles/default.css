@@ -100,8 +100,8 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
     color:white;
-    height: 100vw;
-    text-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .footer-link-color a {
@@ -201,4 +201,14 @@ th {
 
 .rate.three span {
     background-color: gold;
+}
+
+.footer-links a,
+footer a {
+    color: white;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #dfefff;
 }

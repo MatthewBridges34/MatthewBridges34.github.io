@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<!-- Satisfies: Create an index page for the hobby site. -->
+<html lang="en">
+<!-- Satisfies: Standard HTML document structure for validation and accessibility. -->
+<head>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <!-- Satisfies: Normal page setup and proper HTML validation. -->
+  <meta charset="UTF-8">
+  <!-- Satisfies: Proper character encoding for a valid HTML page. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Satisfies: Responsive layout and good mobile viewing. -->
+  <meta name="description" content="A single-page hobby website about bowling with multiple section-based pages.">
+  <!-- Satisfies: Good semantic page information and professionalism. -->
+  <title>Bowling | Hobby</title>
+  <!-- Satisfies: Gives the hobby page a browser title. -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8E%B3%3C/text%3E%3C/svg%3E">
+  <!-- Satisfies: Create a favicon for the page. -->
+
+  <style>
+    /* Satisfies: Use an embedded stylesheet since this is all one page. */
+
+    :root {
+      /* Satisfies: Color scheme must be different than your main site pages. */
+      --bg: #101820;
+      --panel: #172a3a;
+      --panel-alt: #22394d;
+      --text: #f2f6f9;
+      --muted: #c7d5e0;
+      --accent: #ffb703;
+      --accent-2: #8ecae6;
+      --border: #34546b;
+      --shadow: rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      /* Satisfies: Cleaner layout control and better spacing consistency. */
+    }
+
+    html {
+      scroll-behavior: smooth;
+      /* Helps navigation feel polished. */
+    }
+
+    body {
+      margin: 0;
+      /* Satisfies: Removes default browser spacing for cleaner design. */
+      font-family: Arial, Helvetica, sans-serif;
+      /* Satisfies: No Times New Roman. */
+      background: linear-gradient(180deg, #0b141d 0%, #101820 100%);
+      /* Satisfies: No plain white background. */
+      color: var(--text);
+      /* Satisfies: No plain black text. */
+      line-height: 1.6;
+      /* Satisfies: CRAP principles through readable spacing and alignment. */
+    }
+
+    a {
+      color: var(--accent-2);
+      /* Satisfies: No generic blue underlined links. */
+      text-decoration: none;
+      /* Satisfies: Removes generic browser default link styling. */
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent);
+      text-decoration: underline;
+      /* Satisfies: Accessible visual feedback for interaction. */
+    }
+
+    header,
+    main,
+    footer {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      /* Satisfies: header/main/footer within the body and centered layout. */
+    }
+
+    header {
+      padding: 1.5rem 0 1rem;
+      /* Satisfies: Adds spacing and visual separation. */
+    }
+
+    .site-title {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      text-align: center;
+      /* Satisfies: Header tag should have an h1 with the name of the hobby. */
+    }
+
+    .tagline {
+      text-align: center;
+      color: var(--muted);
+      margin: 0.4rem 0 1rem;
+      /* Helps create contrast and repetition in design. */
+    }
+
+    .divider {
+      text-align: center;
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 0.75rem 0 1.25rem;
+      /* Satisfies: Use a unique divider symbol different from your other pages. */
+    }
+
+    nav {
+      background-color: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 8px 18px var(--shadow);
+      padding: 0.9rem;
+      /* Satisfies: Add links in the header/nav to switch between sections. */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      /* Satisfies: Clean nav formatting using CRAP principles. */
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 0.65rem 0.95rem;
+      background-color: var(--panel-alt);
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-weight: bold;
+      /* Satisfies: Better button-like navigation styling. */
+    }
+
+    nav a:hover,
+    nav a:focus,
+    nav a.active-link {
+      background-color: var(--accent);
+      color: #101820;
+      text-decoration: none;
+      border-color: var(--accent);
+      /* Satisfies: Shows which section is active and improves usability. */
+    }
+
+    main {
+      padding: 1.5rem 0;
+      /* Satisfies: Main content container inside body. */
+    }
+
+    section {
+      display: none;
+      /* Satisfies: Only the selected section is visible at a time. */
+      background-color: rgba(23, 42, 58, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 22px var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      /* Satisfies: Each section acts like a different page. */
+    }
+
+    section.active-section {
+      display: block;
+      /* Satisfies: The selected page/section becomes visible. */
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.4rem;
+      /* Satisfies: Each section should have an h2 heading. */
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+      /* Satisfies: CRAP principles through alignment, repetition, and proximity. */
+    }
+
+    .card {
+      background-color: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      /* Satisfies: Makes repeated content blocks visually consistent. */
+    }
+
+    figure {
+      margin: 1rem 0;
+      background-color: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.9rem;
+      /* Satisfies: Each section includes at least one figure. */
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      /* Satisfies: Resize large images and maintain aspect ratio. */
+    }
+
+    figcaption {
+      margin-top: 0.75rem;
+      font-weight: bold;
+      color: var(--accent-2);
+      /* Satisfies: Figure includes an image and caption. */
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background-color: var(--panel-alt);
+      /* Satisfies: Sections may contain tables as one of the required items. */
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 0.75rem;
+      text-align: left;
+      /* Helps readability and validation-safe structure. */
+    }
+
+    th {
+      background-color: #29475f;
+      color: var(--accent);
+      /* Strong contrast for headers. */
+    }
+
+    form {
+      background-color: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      /* Satisfies: A section can include a form as one of its three items. */
+    }
+
+    label,
+    input,
+    select,
+    textarea,
+    button {
+      display: block;
+      width: 100%;
+      font: inherit;
+      /* Satisfies: Accessible and consistent form formatting. */
+    }
+
+    input,
+    select,
+    textarea {
+      margin: 0.35rem 0 1rem;
+      padding: 0.7rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background-color: #f5f7fa;
+      color: #14212d;
+      /* Satisfies: Form controls remain readable and usable. */
+    }
+
+    button {
+      background-color: var(--accent);
+      color: #101820;
+      border: none;
+      border-radius: 10px;
+      padding: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      /* Satisfies: Styled interactive element that avoids plain default styling. */
+    }
+
+    button:hover,
+    button:focus {
+      background-color: #ffd166;
+      /* Accessible hover/focus styling. */
+    }
+
+    footer {
+      padding: 1rem 0 2rem;
+      text-align: center;
+      color: var(--muted);
+      /* Satisfies: Footer within the body. */
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin: 1rem 0;
+      /* Satisfies: Footer includes validation links and design firm link. */
+    }
+
+    .footer-links a {
+      background-color: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.6rem 0.9rem;
+      /* Styled validation/design links. */
+    }
+
+    .small-note {
+      font-size: 0.95rem;
+      /* Minor footer note styling. */
+    }
+
+    @media (max-width: 700px) {
+      /* Satisfies: Helps the page remain usable on smaller screens. */
+      .site-title {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Satisfies: Body contains header, main, and footer. -->
+
+  <header>
+    <!-- Satisfies: Required header element. -->
+    <h1 class="site-title">Bowling</h1>
+    <!-- Satisfies: Header tag should have an h1 with the name of the hobby. -->
+    <p class="tagline">A single-page hobby site about practice, strategy, community, and competition.</p>
+    <!-- Adds supporting intro text under the hobby title. -->
+    <p class="divider">✦ 🎳 ✦</p>
+    <!-- Satisfies: Unique divider symbol. -->
+
+    <nav aria-label="Section navigation">
+      <!-- Satisfies: Add links in the header/nav to switch between sections. -->
+      <ul>
+        <li><a class="nav-link active-link" href="#what" data-section="what">What</a></li>
+        <!-- Satisfies: What section is the home page and loads first. -->
+        <li><a class="nav-link" href="#who" data-section="who">Who</a></li>
+        <!-- Satisfies: Required Who section. -->
+        <li><a class="nav-link" href="#when" data-section="when">When</a></li>
+        <!-- Satisfies: Required When section. -->
+        <li><a class="nav-link" href="#where" data-section="where">Where</a></li>
+        <!-- Satisfies: Required Where section. -->
+        <li><a class="nav-link" href="#how" data-section="how">How</a></li>
+        <!-- Satisfies: Required How section. -->
+        <li><a class="nav-link" href="#why" data-section="why">Why</a></li>
+        <!-- Satisfies: Required Why section. -->
+        <li><a class="nav-link" href="#ai-prompts" data-section="ai-prompts">AI Prompts</a></li>
+        <!-- Satisfies: Required AI Prompts section. -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Satisfies: Required main element. -->
+
+    <section id="what" class="active-section">
+      <!-- Satisfies: What (Home page) section loads first and explains the hobby. -->
+      <h2>What</h2>
+      <!-- Satisfies: Each section has an h2 heading. -->
+      <p>Bowling is both a competitive sport and a lifelong hobby. It blends repetition, mechanics, lane reading, focus, and community. For me, bowling is a hobby that rewards patience and steady improvement.</p>
+      <!-- Item 1 in this section. -->
+      <p>Unlike many hobbies that depend on weather or a large group, bowling can be practiced year-round. A player can work on timing, release, spare shooting, and strategy in every session.</p>
+      <!-- Item 2 in this section. -->
+      <div class="content-grid">
+        <!-- Item group 3 in this section. -->
+        <article class="card">
+          <h3>Skill</h3>
+          <p>Bowling develops coordination, consistency, and body control. A small adjustment in footwork or release can change the result dramatically.</p>
+        </article>
+        <article class="card">
+          <h3>Strategy</h3>
+          <p>It is not only about throwing hard. Good bowlers watch the lane pattern, choose proper angles, and make smart adjustments.</p>
+        </article>
+        <article class="card">
+          <h3>Community</h3>
+          <p>Leagues, tournaments, and casual practice nights create opportunities to meet people with similar interests.</p>
+        </article>
+      </div>
+      <figure>
+        <!-- Satisfies: Include at least one figure in the section. -->
+        <img src="images/bowling-alley-feature.jpg" alt="A stylized image of a bowler preparing to release the ball on a brightly lit lane.">
+        <!-- Satisfies: Image must be present with useful alt text for accessibility. -->
+        <figcaption>Bowling combines technique, concentration, and rhythm.</figcaption>
+        <!-- Satisfies: Figure includes a caption. -->
+        <p><em>No Ai Prompt was used here. This image is a real photo I took at a bowling alley.</em></p>
+        <!-- Satisfies: Italicized paragraph explaining the AI prompt used. -->
+      </figure>
+    </section>
+
+    <section id="who">
+      <!-- Satisfies: Required Who section. -->
+      <h2>Who</h2>
+      <p>This hobby is for people who enjoy measurable improvement, competition, and social interaction. Beginners can enjoy bowling casually, while experienced players can focus on averages, tournament play, and lane transition.</p>
+      <!-- Item 1. -->
+      <p>I am drawn to bowling because it lets me combine discipline with fun. It is easy to start, but difficult to master, which keeps the hobby interesting over time.</p>
+      <!-- Item 2. -->
+      <ul>
+        <!-- Item 3. -->
+        <li>Beginners who want an accessible sport</li>
+        <li>Competitive players who enjoy statistics and improvement</li>
+        <li>Families and friends looking for a social activity</li>
+      </ul>
+      <figure>
+        <img src="images/who-bowling.jpg" alt="A group of bowlers smiling together in a bowling center with matching equipment.">
+        <figcaption>Bowling welcomes both casual players and serious competitors.</figcaption>
+        <p><em>AI prompt used: “Generate a semi-realistic group of bowlers in a modern bowling center, friendly and energetic, coordinated visual style, bowling bags and shoes visible.”</em></p>
+      </figure>
+      <table>
+        <!-- Extra item beyond minimum requirement. -->
+        <caption>Common Types of Bowlers</caption>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Main Goal</th>
+            <th>Typical Activity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Casual</td>
+            <td>Fun</td>
+            <td>Weekend games with friends</td>
+          </tr>
+          <tr>
+            <td>League</td>
+            <td>Consistency</td>
+            <td>Weekly team competition</td>
+          </tr>
+          <tr>
+            <td>Tournament</td>
+            <td>Performance</td>
+            <td>Travel and competitive events</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="when">
+      <!-- Satisfies: Required When section. -->
+      <h2>When</h2>
+      <p>Bowling can be enjoyed throughout the year, which makes it an ideal hobby for a regular schedule. Many players practice during weekday evenings, bowl leagues during set nights, and compete in tournaments on weekends.</p>
+      <!-- Item 1. -->
+      <p>The best times often depend on goals. Casual bowlers may prefer slower public sessions, while competitive bowlers often seek lane conditions that match league or tournament play.</p>
+      <!-- Item 2. -->
+      <table>
+        <!-- Item 3. -->
+        <caption>Suggested Bowling Schedule</caption>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Purpose</th>
+            <th>Benefit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Weekday Evening</td>
+            <td>Practice</td>
+            <td>Build repetition and spare accuracy</td>
+          </tr>
+          <tr>
+            <td>League Night</td>
+            <td>Competition</td>
+            <td>Apply skills under pressure</td>
+          </tr>
+          <tr>
+            <td>Weekend Morning</td>
+            <td>Focused training</td>
+            <td>Test equipment and adjustments</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="card">
+        <h3>Best Seasons</h3>
+        <p>Because bowling is indoors, it works well in every season. It is especially appealing during very hot summers and colder months when outdoor sports are less comfortable.</p>
+      </div>
+      <figure>
+        <img src="images/when-bowling.jpg" alt="A bowling alley scene showing league play in the evening with score monitors glowing.">
+        <figcaption>Evening practice and league sessions are common times to bowl.</figcaption>
+        <p><em>AI prompt used: “Create a semi-realistic evening bowling league scene with bowlers on several lanes, score monitors visible, warm indoor lighting, and a consistent visual style.”</em></p>
+      </figure>
+    </section>
+
+    <section id="where">
+      <!-- Satisfies: Required Where section. -->
+      <h2>Where</h2>
+      <p>Bowling takes place in bowling centers, but the experience can vary greatly depending on the location. Some centers focus on family entertainment, while others are better for league practice and serious competition.</p>
+      <!-- Item 1. -->
+      <p>The best places to bowl usually have well-maintained lanes, good lighting, reliable approaches, and a supportive community of players.</p>
+      <!-- Item 2. -->
+      <div class="content-grid">
+        <!-- Item 3. -->
+        <article class="card">
+          <h3>Local Bowling Centers</h3>
+          <p>These are convenient for regular practice and social bowling.</p>
+        </article>
+        <article class="card">
+          <h3>Tournament Venues</h3>
+          <p>These locations expose bowlers to more difficult lane conditions and stronger competition.</p>
+        </article>
+        <article class="card">
+          <h3>College or Community Events</h3>
+          <p>These settings often help new bowlers connect with teams, coaches, and local leagues.</p>
+        </article>
+      </div>
+      <figure>
+        <img src="images/where-bowling.jpg" alt="A modern bowling center interior with multiple polished lanes and seating areas.">
+        <figcaption>A quality bowling center can improve both practice and enjoyment.</figcaption>
+        <p><em>AI prompt used: “Generate a semi-realistic modern bowling center interior with multiple lanes, polished wood, ball returns, seating, and balanced sports photography lighting.”</em></p>
+      </figure>
+    </section>
+
+    <section id="how">
+      <!-- Satisfies: Required How section. -->
+      <h2>How</h2>
+      <p>Getting started in bowling is simple. A new player needs a bowling center, rental shoes, a ball that fits comfortably, and a willingness to practice the basics.</p>
+      <!-- Item 1. -->
+      <ol>
+        <!-- Item 2. -->
+        <li>Learn the approach and basic footwork.</li>
+        <li>Practice a controlled release rather than only throwing harder.</li>
+        <li>Focus on spare shooting before advanced hook techniques.</li>
+      </ol>
+      <form action="#" method="get">
+        <!-- Item 3. -->
+        <label for="goal">What is your bowling goal?</label>
+        <select id="goal" name="goal">
+          <option value="fun">Have fun with friends</option>
+          <option value="league">Join a league</option>
+          <option value="improve">Improve average</option>
+        </select>
+
+        <label for="practice">How many times per week can you practice?</label>
+        <input id="practice" name="practice" type="text" placeholder="Example: 2 times per week">
+
+        <label for="notes">What do you want to improve first?</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Examples: spare shooting, balance, timing"></textarea>
+
+        <button type="submit">Plan My Start</button>
+      </form>
+      <figure>
+        <img src="images/how-bowling.jpg" alt="A bowler practicing a smooth release with focus on form and balance.">
+        <figcaption>Good bowling starts with fundamentals and repetition.</figcaption>
+        <p><em>AI prompt used: “Create a semi-realistic instructional sports image of a bowler practicing release and balance, clear body posture, bowling lane visible, consistent indoor lighting.”</em></p>
+      </figure>
+    </section>
+
+    <section id="why">
+      <!-- Satisfies: Required Why section. -->
+      <h2>Why</h2>
+      <p>I enjoy bowling because it gives clear feedback. Every frame reveals something about timing, accuracy, and decision-making. That constant feedback makes improvement satisfying.</p>
+      <!-- Item 1. -->
+      <p>Bowling also provides stress relief, competition, and connection with other people. It is one of the few hobbies that can feel relaxing during casual play and intense during serious competition.</p>
+      <!-- Item 2. -->
+      <div class="content-grid">
+        <!-- Item 3. -->
+        <article class="card">
+          <h3>Mental Focus</h3>
+          <p>Bowling teaches concentration, patience, and emotional control.</p>
+        </article>
+        <article class="card">
+          <h3>Personal Growth</h3>
+          <p>Tracking scores, averages, and spare percentages makes progress easy to measure.</p>
+        </article>
+        <article class="card">
+          <h3>Enjoyment</h3>
+          <p>The sound of the pins, the challenge of lane adjustments, and the social atmosphere make the hobby memorable.</p>
+        </article>
+      </div>
+      <figure>
+        <img src="images/why-bowling.jpg" alt="A bowler celebrating after a strike in a modern bowling alley.">
+        <figcaption>Bowling is rewarding because progress is visible and exciting.</figcaption>
+        <p><em>AI prompt used: “Generate a semi-realistic celebratory bowling moment after a strike, energetic but clean composition, modern alley background, consistent style with previous images.”</em></p>
+      </figure>
+    </section>
+
+    <section id="ai-prompts">
+      <!-- Satisfies: Required AI Prompts section. -->
+      <h2>AI Prompts</h2>
+      <p>I used AI to help brainstorm site structure, write starter HTML/CSS, and generate image prompts that match one visual style. I then edited the content for clarity, formatting, and course requirements.</p>
+      <!-- Item 1. -->
+      <div class="card">
+        <!-- Item 2. -->
+        <h3>Prompt 1</h3>
+        <p>Create a one-page hobby website using HTML, embedded CSS, and a little JavaScript. Use section tags as separate pages, make the What section load first, and include header, nav, main, and footer.</p>
+      </div>
+      <div class="card">
+        <!-- Item 3. -->
+        <h3>Prompt 2</h3>
+        <p>Write content for a bowling hobby site with sections for What, Who, When, Where, How, and Why. Each section should include at least three items and be student-friendly.</p>
+      </div>
+      <div class="card">
+        <h3>Prompt 3</h3>
+        <p>Generate consistent semi-realistic image prompts for a bowling hobby website so all figures match the same visual style.</p>
+      </div>
+      <figure>
+        <img src="images/ai-prompts-bowling.jpg" alt="A stylized collage representing website planning, coding, and bowling images.">
+        <figcaption>AI was used as a planning and drafting tool for the project.</figcaption>
+        <p><em>AI prompt used: “Create a semi-realistic collage representing website planning, coding, and bowling visuals in one consistent sports-themed design.”</em></p>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Satisfies: Required footer element. -->
+    <div class="footer-links">
+      <!-- Satisfies: Footer should include validation buttons and design firm link. -->
+      <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">HTML Validation</a>
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">CSS Validation</a>
+      <a href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer">Accessibility Check</a>
+      <a href="../maliciousbeastdesigns.com/index.html" target="_blank" rel="noopener noreferrer">Design Firm</a>
+    </div>
+    <p class="small-note">Built as a single-page hobby site with section-based navigation.</p>
+  </footer>
+
+  <script>
+    /* Satisfies: Use CSS/JS so only the selected section is visible at a time. */
+
+    const navLinks = document.querySelectorAll('.nav-link');
+    /* Gets all navigation links. */
+    const sections = document.querySelectorAll('main section');
+    /* Gets all page-like sections. */
+
+    function showSection(sectionId) {
+      /* Shows only the selected section. */
+      sections.forEach((section) => {
+        section.classList.toggle('active-section', section.id === sectionId);
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.toggle('active-link', link.dataset.section === sectionId);
+      });
+    }
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        /* Prevents the page from jumping in a messy way. */
+        const targetSection = link.dataset.section;
+        showSection(targetSection);
+        /* Satisfies: Switch between sections like multiple pages. */
+        window.location.hash = targetSection;
+        /* Keeps the URL synced with the visible section. */
+      });
+    });
+
+    const initialSection = window.location.hash ? window.location.hash.substring(1) : 'what';
+    /* Satisfies: What section should be the default visible page. */
+    const validSection = document.getElementById(initialSection) ? initialSection : 'what';
+    /* Makes sure only a real section is shown. */
+    showSection(validSection);
+    /* Displays the correct starting section on page load. */
+  </script>
+</body>
+</html>

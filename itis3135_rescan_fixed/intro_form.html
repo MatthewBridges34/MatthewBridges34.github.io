@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITIS3135 | Matthew Bridges's | Determined 49er | Intro Form</title>
+
+    <link rel="stylesheet" href="styles/default.css" />
+  <link rel="stylesheet" href="styles/intro_form.css" />
+
+
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+  <main>
+    <h2 id="page-heading">Intro Form</h2>
+    <h3>Please submit the form below.</h3>
+
+    <section id="form-panel">
+      <form id="intro-form">
+        <fieldset>
+          <legend>Name and Mascot</legend>
+
+          <label for="first-name">First Name *</label>
+          <input
+            type="text"
+            id="first-name"
+            name="firstName"
+            value="Matthew"
+            placeholder="Enter first name"
+            required
+          />
+
+          <label for="middle-name">Middle Name / Initial</label>
+          <input
+            type="text"
+            id="middle-name"
+            name="middleName"
+            value=""
+            placeholder="Enter middle name or initial"
+          />
+
+          <label for="preferred-name">Nickname / Preferred Name</label>
+          <input
+            type="text"
+            id="preferred-name"
+            name="preferredName"
+            value=""
+            placeholder="Enter nickname or preferred name"
+          />
+
+          <label for="last-name">Last Name *</label>
+          <input
+            type="text"
+            id="last-name"
+            name="lastName"
+            value="Bridges"
+            placeholder="Enter last name"
+            required
+          />
+
+          <label for="mascot-adjective">Mascot Adjective *</label>
+          <input
+            type="text"
+            id="mascot-adjective"
+            name="mascotAdjective"
+            value="Determined"
+            placeholder="Enter mascot adjective"
+            required
+          />
+
+          <label for="mascot-animal">Mascot Animal *</label>
+          <input
+            type="text"
+            id="mascot-animal"
+            name="mascotAnimal"
+            value="49er"
+            placeholder="Enter mascot animal"
+            required
+          />
+
+          <label for="divider">Divider *</label>
+          <input
+            type="text"
+            id="divider"
+            name="divider"
+            value="|"
+            placeholder="Example: ~ or | or ♥"
+            required
+            class="short-input"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Acknowledgment</legend>
+
+          <label for="acknowledgment-statement">Acknowledgment Statement *</label>
+          <textarea
+            id="acknowledgment-statement"
+            name="acknowledgmentStatement"
+            placeholder="Enter acknowledgment statement"
+            required
+          >I understand that the content on this page is my own and is provided for this course assignment.</textarea>
+
+          <label for="acknowledgment-date">Acknowledgment Date *</label>
+          <input
+            type="date"
+            id="acknowledgment-date"
+            name="acknowledgmentDate"
+            value="2026-03-22"
+            required
+            class="short-input"
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Picture</legend>
+
+          <label for="picture">Upload a Picture</label>
+          <input
+            type="file"
+            id="picture"
+            name="picture"
+            accept="image/*"
+          />
+
+          <input
+            type="hidden"
+            id="default-picture-path"
+            value="images/myself.jpg"
+          />
+
+          <figure>
+            <img
+              id="image-preview"
+              src="images/myself.jpg"
+              alt="Picture of Matthew Bridges in the Metro"
+            />
+            <figcaption>Picture of myself in the Metro.</figcaption>
+          </figure>
+
+          <label for="picture-caption">Picture Caption *</label>
+          <input
+            type="text"
+            id="picture-caption"
+            name="pictureCaption"
+            value="Picture of myself in the Metro."
+            placeholder="Enter picture caption"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <legend>Introduction Content</legend>
+
+          <label for="personal-statement">Personal Statement *</label>
+          <textarea
+            id="personal-statement"
+            name="personalStatement"
+            placeholder="Enter your personal statement"
+            required
+          >I'm currently a rising senior at UNC Charlotte studying Computer Science with a focus in Cybersecurity. This is one of my first times working with HTML conventionally.</textarea>
+
+          <label for="personal-background">Personal Background *</label>
+          <textarea
+            id="personal-background"
+            name="personalBackground"
+            placeholder="Enter personal background"
+            required
+          >I’m a 22-year-old college student. I like to explore places, take photos, and play video games in my free time.</textarea>
+
+          <label for="professional-background">Professional Background *</label>
+          <textarea
+            id="professional-background"
+            name="professionalBackground"
+            placeholder="Enter professional background"
+            required
+          >After a full-time semester during the start of my junior year of college, I managed to settle a paid internship over the summer with The Heritage Foundation.</textarea>
+
+          <label for="academic-background">Academic Background *</label>
+          <textarea
+            id="academic-background"
+            name="academicBackground"
+            placeholder="Enter academic background"
+            required
+          >I’m currently a junior at UNC Charlotte studying computer science with a focus on Cyber Security. I am formerly a student from Texas State University.</textarea>
+
+          <label for="subject-background">Background in This Subject *</label>
+          <textarea
+            id="subject-background"
+            name="subjectBackground"
+            placeholder="Enter subject background"
+            required
+          >Crudely formed websites with a team of students while helping a church for a high school graduation project during my senior year. But beyond the severe help of my team, that is the most of my skills, otherwise I am excited to learn.</textarea>
+
+          <label for="primary-computer">Primary Computer Platform *</label>
+          <textarea
+            id="primary-computer"
+            name="primaryComputer"
+            placeholder="Enter your primary computer platform"
+            required
+          >Windows laptop</textarea>
+
+          <label for="funny-thing">Funny Thing</label>
+          <textarea
+            id="funny-thing"
+            name="funnyThing"
+            placeholder="Enter a funny thing about yourself"
+          ></textarea>
+
+          <label for="share-more">Something I'd Like to Share</label>
+          <textarea
+            id="share-more"
+            name="shareMore"
+            placeholder="Enter something you would like to share"
+          >I drove cross country by myself a year ago.</textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Courses I’m Taking &amp; Why</legend>
+
+          <div id="courses-container">
+            <div class="course-block">
+              <hr>
+              <label>Department *</label>
+              <input
+                type="text"
+                class="course-department"
+                value="ITIS"
+                placeholder="Example: ITIS"
+                required
+              />
+
+              <label>Number *</label>
+              <input
+                type="text"
+                class="course-number"
+                value="3135"
+                placeholder="Example: 3135"
+                required
+              />
+
+              <label>Name *</label>
+              <input
+                type="text"
+                class="course-name"
+                value="Front-End App development"
+                placeholder="Enter course name"
+                required
+              />
+
+              <label>Reason *</label>
+              <textarea
+                class="course-reason"
+                placeholder="Why are you taking this course?"
+                required
+              >Required and fun class.</textarea>
+
+              <button type="button" class="delete-course">Delete Course</button>
+            </div>
+
+            <div class="course-block">
+              <hr>
+              <label>Department *</label>
+              <input
+                type="text"
+                class="course-department"
+                value="ITSC"
+                placeholder="Example: ITSC"
+                required
+              />
+
+              <label>Number *</label>
+              <input
+                type="text"
+                class="course-number"
+                value="2181"
+                placeholder="Example: 2181"
+                required
+              />
+
+              <label>Name *</label>
+              <input
+                type="text"
+                class="course-name"
+                value="Intro to Computer Systems"
+                placeholder="Enter course name"
+                required
+              />
+
+              <label>Reason *</label>
+              <textarea
+                class="course-reason"
+                placeholder="Why are you taking this course?"
+                required
+              >Required and interesting class</textarea>
+
+              <button type="button" class="delete-course">Delete Course</button>
+            </div>
+
+            <div class="course-block">
+              <hr>
+              <label>Department *</label>
+              <input
+                type="text"
+                class="course-department"
+                value="ITSC"
+                placeholder="Example: ITSC"
+                required
+              />
+
+              <label>Number *</label>
+              <input
+                type="text"
+                class="course-number"
+                value="3160"
+                placeholder="Example: 3160"
+                required
+              />
+
+              <label>Name *</label>
+              <input
+                type="text"
+                class="course-name"
+                value="Database Design &amp; Implementation"
+                placeholder="Enter course name"
+                required
+              />
+
+              <label>Reason *</label>
+              <textarea
+                class="course-reason"
+                placeholder="Why are you taking this course?"
+                required
+              >Required and relative elective.</textarea>
+
+              <button type="button" class="delete-course">Delete Course</button>
+            </div>
+
+            <div class="course-block">
+              <hr>
+              <label>Department *</label>
+              <input
+                type="text"
+                class="course-department"
+                value="STAT"
+                placeholder="Example: STAT"
+                required
+              />
+
+              <label>Number *</label>
+              <input
+                type="text"
+                class="course-number"
+                value="2122"
+                placeholder="Example: 2122"
+                required
+              />
+
+              <label>Name *</label>
+              <input
+                type="text"
+                class="course-name"
+                value="Intro to Probability and Stat"
+                placeholder="Enter course name"
+                required
+              />
+
+              <label>Reason *</label>
+              <textarea
+                class="course-reason"
+                placeholder="Why are you taking this course?"
+                required
+              >Required class.</textarea>
+
+              <button type="button" class="delete-course">Delete Course</button>
+            </div>
+          </div>
+
+          <button type="button" id="add-course">Add Course</button>
+        </fieldset>
+
+        <fieldset>
+          <legend>Quote and Links</legend>
+
+          <label for="quote">Quote *</label>
+          <textarea
+            id="quote"
+            name="quote"
+            placeholder="Enter your quote"
+            required
+          >Appear weak when you are strong, appear strong when you are weak.</textarea>
+
+          <label for="quote-author">Quote Author *</label>
+          <input
+            type="text"
+            id="quote-author"
+            name="quoteAuthor"
+            value="Sun Tzu, The Art of War"
+            placeholder="Enter quote author"
+            required
+          />
+
+          <div id="links-container">
+            <div class="link-block">
+              <hr>
+              <label>Link 1 Name *</label>
+              <input
+                type="text"
+                class="link-name"
+                value="Personal Home Page"
+                placeholder="Example: GitHub"
+                required
+              />
+
+              <label>Link 1 URL *</label>
+              <input
+                type="url"
+                class="link-href"
+                value="https://matthewbridges34.github.io/"
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+
+            <div class="link-block">
+              <hr>
+              <label>Link 2 Name *</label>
+              <input
+                type="text"
+                class="link-name"
+                value="Introduction Page"
+                placeholder="Example: GitHub"
+                required
+              />
+
+              <label>Link 2 URL *</label>
+              <input
+                type="url"
+                class="link-href"
+                value="https://matthewbridges34.github.io/introduction.html"
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+
+            <div class="link-block">
+              <hr>
+              <label>Link 3 Name *</label>
+              <input
+                type="text"
+                class="link-name"
+                value="ITIS 3135 Home"
+                placeholder="Example: GitHub"
+                required
+              />
+
+              <label>Link 3 URL *</label>
+              <input
+                type="url"
+                class="link-href"
+                value="https://matthewbridges34.github.io/itis3135/"
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+
+            <div class="link-block">
+              <hr>
+              <label>Link 4 Name *</label>
+              <input
+                type="text"
+                class="link-name"
+                value="UNC Charlotte"
+                placeholder="Example: GitHub"
+                required
+              />
+
+              <label>Link 4 URL *</label>
+              <input
+                type="url"
+                class="link-href"
+                value="https://www.charlotte.edu/"
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+
+            <div class="link-block">
+              <hr>
+              <label>Link 5 Name *</label>
+              <input
+                type="text"
+                class="link-name"
+                value="Heritage Foundation"
+                placeholder="Example: GitHub"
+                required
+              />
+
+              <label>Link 5 URL *</label>
+              <input
+                type="url"
+                class="link-href"
+                value="https://www.heritage.org/"
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Form Actions</legend>
+          <div class="button-row">
+            <button type="submit">Submit</button>
+            <button type="reset" id="reset-form">Reset</button>
+            <button type="button" id="clear-form">Clear</button>
+            <button type="button" id="generate-json">Generate JSON</button>
+            <button type="button" id="generate-html">Generate HTML</button>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="output-panel" hidden></section>
+  </main>
+  <div data-include="components/footer.html"></div>
+  <script src="scripts/include.min.js"></script>
+
+  <script src="scripts/introduction.js"></script>
+  <script src="scripts/generate_json.js"></script>
+  <script src="scripts/generate_html.js"></script>
+</body>
+</html>

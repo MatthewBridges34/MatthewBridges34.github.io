@@ -1,0 +1,41 @@
+.review-card {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.review-card h3 {
+  margin-top: 0;
+}
+
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #999;
+  border-radius: 8px;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+ul {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+section {
+  margin-bottom: 25px;
+}

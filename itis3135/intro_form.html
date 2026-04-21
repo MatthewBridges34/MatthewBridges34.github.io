@@ -18,7 +18,8 @@
     <h3>Please submit the form below.</h3>
 
     <section id="form-panel">
-      <form id="intro-form">
+  <h3>Introduction Form Panel</h3>
+  <form id="intro-form">
         <fieldset>
           <legend>Name and Mascot</legend>
 
@@ -105,13 +106,15 @@
 
           <label for="acknowledgment-date">Acknowledgment Date *</label>
           <input
-            type="date"
-            id="acknowledgment-date"
-            name="acknowledgmentDate"
-            value="2026-03-22"
-            required
-            class="short-input"
-          />
+  type="text"
+  id="acknowledgment-date"
+  name="acknowledgmentDate"
+  value="2026-03-22"
+  placeholder="YYYY-MM-DD"
+  pattern="\d{4}-\d{2}-\d{2}"
+  required
+  class="short-input"
+/>
         </fieldset>
 
         <fieldset>
@@ -523,7 +526,9 @@
       </form>
     </section>
 
-    <section id="output-panel" hidden></section>
+    <section id="output-panel" hidden>
+      <h3 class="sr-only">Generated Introduction Output</h3>
+    </section>
   </main>
   <div data-include="components/footer.html"></div>
   <script src="scripts/include.min.js"></script>

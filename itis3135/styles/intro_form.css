@@ -32,7 +32,6 @@
     }
 
     form {
-      width: 100%;
       max-width: 760px;
       margin: 0 auto;
       background: #fffdf8;
@@ -74,7 +73,6 @@
     input[type="date"],
     input[type="file"],
     textarea {
-      width: 100%;
       max-width: 560px;
       display: block;
       margin: 0 auto 10px;
@@ -101,7 +99,6 @@
 
     #image-preview {
       display: block;
-      width: 100%;
       max-width: 220px;
       height: auto;
       margin: 0 auto 10px;

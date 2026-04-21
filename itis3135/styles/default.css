@@ -191,15 +191,15 @@ th {
 }
 
 /* Rating levels */
-.rate.one span:first-child {
+.rate-one span:first-child {
     background-color: gold;
 }
 
-.rate.two span:nth-child(-n+2) {
+.rate-two span:nth-child(-n+2) {
     background-color: gold;
 }
 
-.rate.three span {
+.rate-three span {
     background-color: gold;
 }
 

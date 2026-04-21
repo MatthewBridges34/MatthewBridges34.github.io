@@ -13,7 +13,7 @@
   <!-- Satisfies: Good semantic page information and professionalism. -->
   <title>Bowling | Hobby</title>
   <!-- Satisfies: Gives the hobby page a browser title. -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%F0%9F%8E%B3%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E%F0%9F%8E%B3%3C/text%3E%3C/svg%3E">
   <!-- Satisfies: Create a favicon for the page. -->
 
   <style>
@@ -72,9 +72,9 @@
     header,
     main,
     footer {
-      width: min(1100px, 92%);
+      width: 92%;
+      max-width: 1100px;
       margin: 0 auto;
-      /* Satisfies: header/main/footer within the body and centered layout. */
     }
 
     header {
@@ -135,15 +135,18 @@
       /* Satisfies: Better button-like navigation styling. */
     }
 
-    nav a:hover,
-    nav a:focus,
-    nav a.active-link {
-      background-color: var(--accent);
-      color: #101820;
-      text-decoration: none;
-      border-color: var(--accent);
-      /* Satisfies: Shows which section is active and improves usability. */
-    }
+   nav a:hover,
+nav a:focus,
+.active-link {
+  background-color: var(--accent);
+  color: #101820;
+  text-decoration: none;
+  border-color: var(--accent);
+}
+
+.active-section {
+  display: block;
+}
 
     main {
       padding: 1.5rem 0;
@@ -175,22 +178,19 @@
       /* Satisfies: Each section should have an h2 heading. */
     }
 
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-      /* Satisfies: CRAP principles through alignment, repetition, and proximity. */
-    }
-
+    
     .card {
-      background-color: var(--panel-alt);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1rem;
-      /* Satisfies: Makes repeated content blocks visually consistent. */
+      display: inline-block;
+      width: 31%;
+      margin-right: 3.5%;
+      margin-bottom: 1rem;
+      vertical-align: top;
+      font-size: 16px;
     }
 
+    .card:last-child {
+      margin-right: 0;
+    }
     figure {
       margin: 1rem 0;
       background-color: var(--panel-alt);
@@ -211,8 +211,7 @@
     figcaption {
       margin-top: 0.75rem;
       font-weight: bold;
-      color: var(--accent-2);
-      /* Satisfies: Figure includes an image and caption. */
+      color: #8ecae6;
     }
 
     table {
@@ -386,14 +385,13 @@
         </article>
       </div>
       <figure>
-        <!-- Satisfies: Include at least one figure in the section. -->
-        <img src="images/bowling-alley-feature.jpg" alt="A stylized image of a bowler preparing to release the ball on a brightly lit lane.">
-        <!-- Satisfies: Image must be present with useful alt text for accessibility. -->
-        <figcaption>Bowling combines technique, concentration, and rhythm.</figcaption>
-        <!-- Satisfies: Figure includes a caption. -->
-        <p><em>No Ai Prompt was used here. This image is a real photo I took at a bowling alley.</em></p>
-        <!-- Satisfies: Italicized paragraph explaining the AI prompt used. -->
-      </figure>
+  <img src="images/bowling-alley-feature.jpg" alt="A stylized image of a bowler preparing to release the ball on a brightly lit lane.">
+  <figcaption>
+    Bowling combines technique, concentration, and rhythm.
+    <br>
+    <em>No AI prompt was used here. This image is a real photo I took at a bowling alley.</em>
+  </figcaption>
+</figure>
     </section>
 
     <section id="who">
@@ -410,10 +408,13 @@
         <li>Families and friends looking for a social activity</li>
       </ul>
       <figure>
-        <img src="images/who-bowling.jpg" alt="A group of bowlers smiling together in a bowling center with matching equipment.">
-        <figcaption>Bowling welcomes both casual players and serious competitors.</figcaption>
-        <p><em>AI prompt used: “Generate a semi-realistic group of bowlers in a modern bowling center, friendly and energetic, coordinated visual style, bowling bags and shoes visible.”</em></p>
-      </figure>
+  <img src="images/who-bowling.jpg" alt="A group of bowlers smiling together in a bowling center with matching equipment.">
+  <figcaption>
+    Bowling welcomes both casual players and serious competitors.
+    <br>
+    <em>AI prompt used: “Generate a semi-realistic group of bowlers in a modern bowling center, friendly and energetic, coordinated visual style, bowling bags and shoes visible.”</em>
+  </figcaption>
+</figure>
       <table>
         <!-- Extra item beyond minimum requirement. -->
         <caption>Common Types of Bowlers</caption>
@@ -484,10 +485,13 @@
         <p>Because bowling is indoors, it works well in every season. It is especially appealing during very hot summers and colder months when outdoor sports are less comfortable.</p>
       </div>
       <figure>
-        <img src="images/when-bowling.jpg" alt="A bowling alley scene showing league play in the evening with score monitors glowing.">
-        <figcaption>Evening practice and league sessions are common times to bowl.</figcaption>
-        <p><em>AI prompt used: “Create a semi-realistic evening bowling league scene with bowlers on several lanes, score monitors visible, warm indoor lighting, and a consistent visual style.”</em></p>
-      </figure>
+  <img src="images/when-bowling.jpg" alt="A bowling alley scene showing league play in the evening with score monitors glowing.">
+  <figcaption>
+    Evening practice and league sessions are common times to bowl.
+    <br>
+    <em>AI prompt used: “Create a semi-realistic evening bowling league scene with bowlers on several lanes, score monitors visible, warm indoor lighting, and a consistent visual style.”</em>
+  </figcaption>
+</figure>
     </section>
 
     <section id="where">
@@ -513,10 +517,13 @@
         </article>
       </div>
       <figure>
-        <img src="images/where-bowling.jpg" alt="A modern bowling center interior with multiple polished lanes and seating areas.">
-        <figcaption>A quality bowling center can improve both practice and enjoyment.</figcaption>
-        <p><em>AI prompt used: “Generate a semi-realistic modern bowling center interior with multiple lanes, polished wood, ball returns, seating, and balanced sports photography lighting.”</em></p>
-      </figure>
+  <img src="images/where-bowling.jpg" alt="A modern bowling center interior with multiple polished lanes and seating areas.">
+  <figcaption>
+    A quality bowling center can improve both practice and enjoyment.
+    <br>
+    <em>AI prompt used: “Generate a semi-realistic modern bowling center interior with multiple lanes, polished wood, ball returns, seating, and balanced sports photography lighting.”</em>
+  </figcaption>
+</figure>
     </section>
 
     <section id="how">
@@ -548,10 +555,13 @@
         <button type="submit">Plan My Start</button>
       </form>
       <figure>
-        <img src="images/how-bowling.jpg" alt="A bowler practicing a smooth release with focus on form and balance.">
-        <figcaption>Good bowling starts with fundamentals and repetition.</figcaption>
-        <p><em>AI prompt used: “Create a semi-realistic instructional sports image of a bowler practicing release and balance, clear body posture, bowling lane visible, consistent indoor lighting.”</em></p>
-      </figure>
+  <img src="images/how-bowling.jpg" alt="A bowler practicing a smooth release with focus on form and balance.">
+  <figcaption>
+    Good bowling starts with fundamentals and repetition.
+    <br>
+    <em>AI prompt used: “Create a semi-realistic instructional sports image of a bowler practicing release and balance, clear body posture, bowling lane visible, consistent indoor lighting.”</em>
+  </figcaption>
+</figure>
     </section>
 
     <section id="why">
@@ -577,10 +587,13 @@
         </article>
       </div>
       <figure>
-        <img src="images/why-bowling.jpg" alt="A bowler celebrating after a strike in a modern bowling alley.">
-        <figcaption>Bowling is rewarding because progress is visible and exciting.</figcaption>
-        <p><em>AI prompt used: “Generate a semi-realistic celebratory bowling moment after a strike, energetic but clean composition, modern alley background, consistent style with previous images.”</em></p>
-      </figure>
+  <img src="images/why-bowling.jpg" alt="A bowler celebrating after a strike in a modern bowling alley.">
+  <figcaption>
+    Bowling is rewarding because progress is visible and exciting.
+    <br>
+    <em>AI prompt used: “Generate a semi-realistic celebratory bowling moment after a strike, energetic but clean composition, modern alley background, consistent style with previous images.”</em>
+  </figcaption>
+</figure>
     </section>
 
     <section id="ai-prompts">
@@ -603,10 +616,13 @@
         <p>Generate consistent semi-realistic image prompts for a bowling hobby website so all figures match the same visual style.</p>
       </div>
       <figure>
-        <img src="images/ai-prompts-bowling.jpg" alt="A stylized collage representing website planning, coding, and bowling images.">
-        <figcaption>AI was used as a planning and drafting tool for the project.</figcaption>
-        <p><em>AI prompt used: “Create a semi-realistic collage representing website planning, coding, and bowling visuals in one consistent sports-themed design.”</em></p>
-      </figure>
+  <img src="images/ai-prompts-bowling.jpg" alt="A stylized collage representing website planning, coding, and bowling images.">
+  <figcaption>
+    AI was used as a planning and drafting tool for the project.
+    <br>
+    <em>AI prompt used: “Create a semi-realistic collage representing website planning, coding, and bowling visuals in one consistent sports-themed design.”</em>
+  </figcaption>
+</figure>
     </section>
   </main>
 

@@ -37,46 +37,75 @@ document.addEventListener("DOMContentLoaded", () => {
   const coursesContainer = document.getElementById("courses-container");
   const linksContainer = document.getElementById("links-container");
 
-  currentImageValue = defaultPicturePath;
-  imagePreview.src = defaultPicturePath;
-
-  renderDefaultCourses();
-  renderDefaultLinks();
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    if (!validateForm()) {
-      form.reportValidity();
-      return;
-    }
-
-    const data = collectFormData();
-    renderIntroductionOutput(data);
-  });
-
-  addCourseButton.addEventListener("click", () => {
-    addCourseBlock();
-  });
-
-  pictureInput.addEventListener("change", handleImageUpload);
-
-  clearButton.addEventListener("click", clearFormValues);
-
-  resetButton.addEventListener("click", () => {
-    setTimeout(() => {
-      resetFormToDefaults();
-    }, 0);
-  });
-
-  function renderDefaultCourses() {
-    coursesContainer.innerHTML = "";
-    DEFAULT_COURSES.forEach((course) => addCourseBlock(course));
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll("\"", "&quot;")
+      .replaceAll("'", "&#39;");
   }
 
-  function renderDefaultLinks() {
-    linksContainer.innerHTML = "";
-    DEFAULT_LINKS.forEach((link, index) => addLinkBlock(link, index + 1));
+  function escapeAttribute(value) {
+    return escapeHtml(value);
+  }
+
+  function escapeText(value) {
+    return escapeHtml(value);
+  }
+
+  function normalizeUrl(url) {
+    if (!url) {
+      return "";
+    }
+
+    if (
+      url.startsWith("http://") ||
+      url.startsWith("https://") ||
+      url.startsWith("mailto:") ||
+      url.startsWith("tel:")
+    ) {
+      return url;
+    }
+
+    return `https://${url}`;
+  }
+
+  function buildRawDisplayName(data) {
+    const parts = [data.firstName];
+
+    if (data.middleName) {
+      parts.push(data.middleName);
+    }
+
+    if (data.preferredName) {
+      parts.push(`"${data.preferredName}"`);
+    }
+
+    parts.push(data.lastName);
+
+    return `${parts.join(" ")} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}`;
+  }
+
+  function buildDisplayName(data) {
+    const parts = [escapeHtml(data.firstName)];
+
+    if (data.middleName) {
+      parts.push(escapeHtml(data.middleName));
+    }
+
+    if (data.preferredName) {
+      parts.push(`"${escapeHtml(data.preferredName)}"`);
+    }
+
+    parts.push(escapeHtml(data.lastName));
+
+    const mascotPart = [
+      escapeHtml(data.mascotAdjective),
+      escapeHtml(data.mascotAnimal)
+    ].join(" ");
+
+    return `${parts.join(" ")} ${escapeHtml(data.divider)} ${mascotPart}`;
   }
 
   function addCourseBlock(course = {}) {
@@ -93,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
         placeholder="Example: ITIS"
         required
       />
-
       <label>Number *</label>
       <input
         type="text"
@@ -102,7 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
         placeholder="Example: 3135"
         required
       />
-
       <label>Course Name *</label>
       <input
         type="text"
@@ -111,14 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
         placeholder="Enter course name"
         required
       />
-
       <label>Reason *</label>
       <textarea
         class="course-reason"
         placeholder="Why are you taking this course?"
         required
       >${escapeText(course.reason || "")}</textarea>
-
       <button type="button" class="delete-course">Delete Course</button>
     `;
 
@@ -143,7 +168,6 @@ document.addEventListener("DOMContentLoaded", () => {
         placeholder="Example: GitHub"
         required
       />
-
       <label>Link ${linkNumber} URL *</label>
       <input
         type="url"
@@ -157,6 +181,20 @@ document.addEventListener("DOMContentLoaded", () => {
     linksContainer.appendChild(linkBlock);
   }
 
+  function renderDefaultCourses() {
+    coursesContainer.innerHTML = "";
+    DEFAULT_COURSES.forEach((course) => {
+      addCourseBlock(course);
+    });
+  }
+
+  function renderDefaultLinks() {
+    linksContainer.innerHTML = "";
+    DEFAULT_LINKS.forEach((link, index) => {
+      addLinkBlock(link, index + 1);
+    });
+  }
+
   function handleImageUpload() {
     const selectedFile = pictureInput.files[0];
 
@@ -165,10 +203,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const reader = new FileReader();
+
     reader.onload = (event) => {
       currentImageValue = event.target.result;
       imagePreview.src = currentImageValue;
     };
+
     reader.readAsDataURL(selectedFile);
   }
 
@@ -178,11 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     inputs.forEach((input) => {
-      if (input.type === "file") {
-        input.value = "";
-      } else {
-        input.value = "";
-      }
+      input.value = "";
     });
 
     coursesContainer.innerHTML = "";
@@ -261,27 +297,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
-  function buildDisplayName(data) {
-    const parts = [escapeHtml(data.firstName)];
-
-    if (data.middleName) {
-      parts.push(escapeHtml(data.middleName));
-    }
-
-    if (data.preferredName) {
-      parts.push(`"${escapeHtml(data.preferredName)}"`);
-    }
-
-    parts.push(escapeHtml(data.lastName));
-
-    const mascotPart = [
-      escapeHtml(data.mascotAdjective),
-      escapeHtml(data.mascotAnimal)
-    ].join(" ");
-
-    return `${parts.join(" ")} ${escapeHtml(data.divider)} ${mascotPart}`;
-  }
-
   function buildIntroductionMarkup(data) {
     const courseMarkup = data.courses.map((course) => `
       <li>
@@ -310,7 +325,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return `
       <section class="introduction-output">
         <h3>${buildDisplayName(data)}</h3>
-
         <figure>
           <img
             src="${escapeAttribute(data.image)}"
@@ -319,9 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
           />
           <figcaption>${escapeHtml(data.pictureCaption)}</figcaption>
         </figure>
-
         <p>${escapeHtml(data.personalStatement)}</p>
-
         <ul>
           <li><strong>Personal Background:</strong> ${escapeHtml(data.personalBackground)}</li>
           <li><strong>Professional Background:</strong> ${escapeHtml(data.professionalBackground)}</li>
@@ -342,6 +354,19 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
       </section>
     `;
+  }
+
+  function attachStartOverHandler() {
+    const startOverLink = document.getElementById("start-over-link");
+
+    startOverLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      outputPanel.hidden = true;
+      formPanel.hidden = false;
+      outputPanel.innerHTML = "";
+      pageHeading.textContent = "Introduction Form";
+      resetFormToDefaults();
+    });
   }
 
   function renderIntroductionOutput(data) {
@@ -377,44 +402,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function attachStartOverHandler() {
-    const startOverLink = document.getElementById("start-over-link");
-
-    startOverLink.addEventListener("click", (event) => {
-      event.preventDefault();
-      outputPanel.hidden = true;
-      formPanel.hidden = false;
-      outputPanel.innerHTML = "";
-      pageHeading.textContent = "Introduction Form";
-      resetFormToDefaults();
-    });
-  }
-
   function buildJsonObject(data) {
     return {
-      first_name: data.firstName,
-      middle_name: data.middleName,
-      preferred_name: data.preferredName,
-      last_name: data.lastName,
-      divider: data.divider,
-      mascot_adjective: data.mascotAdjective,
-      mascot_animal: data.mascotAnimal,
-      image: data.image,
-      image_caption: data.pictureCaption,
-      personal_statement: data.personalStatement,
-      personal_background: data.personalBackground,
-      professional_background: data.professionalBackground,
-      academic_background: data.academicBackground,
-      subject_background: data.subjectBackground,
-      primary_computer: data.primaryComputer,
-      funny_thing: data.funnyThing,
-      share_more: data.shareMore,
-      quote: data.quote,
-      quote_author: data.quoteAuthor,
-      acknowledgment_statement: data.acknowledgmentStatement,
-      acknowledgment_date: data.acknowledgmentDate,
-      courses: data.courses,
-      links: data.links
+      "first_name": data.firstName,
+      "middle_name": data.middleName,
+      "preferred_name": data.preferredName,
+      "last_name": data.lastName,
+      "divider": data.divider,
+      "mascot_adjective": data.mascotAdjective,
+      "mascot_animal": data.mascotAnimal,
+      "image": data.image,
+      "image_caption": data.pictureCaption,
+      "personal_statement": data.personalStatement,
+      "personal_background": data.personalBackground,
+      "professional_background": data.professionalBackground,
+      "academic_background": data.academicBackground,
+      "subject_background": data.subjectBackground,
+      "primary_computer": data.primaryComputer,
+      "funny_thing": data.funnyThing,
+      "share_more": data.shareMore,
+      "quote": data.quote,
+      "quote_author": data.quoteAuthor,
+      "acknowledgment_statement": data.acknowledgmentStatement,
+      "acknowledgment_date": data.acknowledgmentDate,
+      "courses": data.courses,
+      "links": data.links
     };
   }
 
@@ -452,55 +464,36 @@ document.addEventListener("DOMContentLoaded", () => {
 </ul>`.trim();
   }
 
-  function buildRawDisplayName(data) {
-    const parts = [data.firstName];
+  currentImageValue = defaultPicturePath;
+  imagePreview.src = defaultPicturePath;
 
-    if (data.middleName) {
-      parts.push(data.middleName);
+  renderDefaultCourses();
+  renderDefaultLinks();
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!validateForm()) {
+      form.reportValidity();
+      return;
     }
 
-    if (data.preferredName) {
-      parts.push(`"${data.preferredName}"`);
-    }
+    const data = collectFormData();
+    renderIntroductionOutput(data);
+  });
 
-    parts.push(data.lastName);
+  addCourseButton.addEventListener("click", () => {
+    addCourseBlock();
+  });
 
-    return `${parts.join(" ")} ${data.divider} ${data.mascotAdjective} ${data.mascotAnimal}`;
-  }
+  pictureInput.addEventListener("change", handleImageUpload);
+  clearButton.addEventListener("click", clearFormValues);
 
-  function normalizeUrl(url) {
-    if (!url) {
-      return "";
-    }
-
-    if (
-      url.startsWith("http://") ||
-      url.startsWith("https://") ||
-      url.startsWith("mailto:") ||
-      url.startsWith("tel:")
-    ) {
-      return url;
-    }
-
-    return `https://${url}`;
-  }
-
-  function escapeHtml(value) {
-    return String(value)
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#39;");
-  }
-
-  function escapeAttribute(value) {
-    return escapeHtml(value);
-  }
-
-  function escapeText(value) {
-    return escapeHtml(value);
-  }
+  resetButton.addEventListener("click", () => {
+    setTimeout(() => {
+      resetFormToDefaults();
+    }, 0);
+  });
 
   window.IntroFormApp = {
     validateForm,

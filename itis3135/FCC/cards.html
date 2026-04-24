@@ -24,6 +24,7 @@
 
     /* #6 */
     .card {
+      box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       width: 120px;
@@ -34,7 +35,6 @@
       font-size: 20px;
       font-weight: bold;
     }
-
     /* #7 */
     .left {
       align-self: flex-start;
@@ -59,37 +59,33 @@
 
 <body>
     <div data-include="../components/header.html"></div>
-    <main>
-        <h2>Cards</h2>
-
-
   <!-- #2 -->
-  <main id="playing-cards">
+  <main>
+    <h2>Cards</h2>
 
-    <!-- Card 1 -->
-    <div class="card">
-      <div class="left">♠ A</div>
-      <div class="middle">♠</div>
-      <div class="right">A ♠</div>
+    <div id="playing-cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="left">♠ A</div>
+            <div class="middle">♠</div>
+            <div class="right">A ♠</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="left">♥ K</div>
+            <div class="middle">♥</div>
+            <div class="right">K ♥</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="left">♦ Q</div>
+            <div class="middle">♦</div>
+            <div class="right">Q ♦</div>
+        </div>
     </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <div class="left">♥ K</div>
-      <div class="middle">♥</div>
-      <div class="right">K ♥</div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <div class="left">♦ Q</div>
-      <div class="middle">♦</div>
-      <div class="right">Q ♦</div>
-    </div>
-
-  </main>
-
-    </main>
+</main>
     <div data-include="../components/footer.html"></div>
     <script src="../scripts/include.min.js"></script>
 </body>

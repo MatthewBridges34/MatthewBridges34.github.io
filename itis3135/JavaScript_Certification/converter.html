@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Path | Markdown Converter</title>
+    <link rel="stylesheet" href="../styles/flower.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Bloom Notes Markdown Converter</h2>
+
+        <section class="converter-intro">
+                <h3>About This Flower Tool</h3>
+                <p>
+                    Use this tool to turn flower care notes, garden ideas, or bloom descriptions
+                    from Markdown into HTML.
+                </p>
+            </section>
+
+        <section class="converter-area">
+            <div class="flower-card">
+                <h3>Markdown Input</h3>
+                <textarea id="markdown-input" placeholder="# Rose Care Notes&#10;- Water deeply twice a week&#10;- Give 6 hours of sunlight&#10;- Prune faded blooms"></textarea>
+            </div>
+
+            <div class="flower-card">
+                <h3>Raw HTML Output</h3>
+                <div id="html-output"></div>
+            </div>
+
+            <div class="flower-card">
+                <h3>Flower Care Preview</h3>
+                <div id="preview"></div>
+            </div>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="../scripts/include.min.js"></script>
+    <script src="../scripts/converter.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Path | Favorite Flower Poll</title>
+    <link rel="stylesheet" href="../styles/flower.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Favorite Flower Voting System</h2>
+
+        <section class="voting-intro">
+            <h3>About This Flower Tool</h3>
+            <p>
+                Vote for your favorite flower in the Petal Path garden poll.
+                Each visitor can choose a bloom and view the current results.
+            </p>
+        </section>
+
+        <section class="flower-card voting-card">
+            <h3>Choose Your Favorite Flower</h3>
+
+            <div class="button-row">
+                <button type="button" onclick="voteFlower('Rose')">Rose</button>
+                <button type="button" onclick="voteFlower('Tulip')">Tulip</button>
+                <button type="button" onclick="voteFlower('Sunflower')">Sunflower</button>
+                <button type="button" onclick="voteFlower('Daisy')">Daisy</button>
+                <button type="button" onclick="voteFlower('Orchid')">Orchid</button>
+            </div>
+
+            <p id="vote-message">Select a flower to cast your vote.</p>
+        </section>
+
+        <section class="flower-card results-card">
+            <h3>Poll Results</h3>
+            <pre id="results"></pre>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="../scripts/include.min.js"></script>
+    <script src="../scripts/voting.js"></script>
+</body>
+</html>

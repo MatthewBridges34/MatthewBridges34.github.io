@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Path | Bloom Weather</title>
+    <link rel="stylesheet" href="../styles/flower.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+
+    <main>
+        <h2>Bloom Weather App</h2>
+
+        <section class="weather-intro">
+            <h3>About This Flower Tool</h3>
+            <p>
+                Select a city to view the current weather and receive flower-care
+                suggestions based on temperature, humidity, wind, and sky conditions.
+            </p>
+        </section>
+
+        <section class="flower-card weather-card">
+            <h3>Choose a Garden Location</h3>
+
+            <label for="city-select">Select a city:</label>
+            <select id="city-select">
+                <option value="new-york">New York</option>
+                <option value="los-angeles">Los Angeles</option>
+                <option value="chicago">Chicago</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="london">London</option>
+            </select>
+
+            <button id="get-weather-btn" type="button">Get Bloom Forecast</button>
+        </section>
+
+        <section class="flower-card forecast-card">
+            <h3>Bloom Forecast Results</h3>
+
+            <img id="weather-icon" src="../images/weather-icon.png" alt="Weather icon">
+
+            <p id="location">Location: Select a city</p>
+            <p id="weather-main">Weather: N/A</p>
+            <p id="main-temperature">Temperature: N/A</p>
+            <p id="feels-like">Feels Like: N/A</p>
+            <p id="humidity">Humidity: N/A</p>
+            <p id="wind">Wind: N/A</p>
+            <p id="wind-gust">Wind Gust: N/A</p>
+        </section>
+
+        <section class="flower-card flower-advice-card">
+            <h3>Flower Care Suggestions</h3>
+
+            <p id="watering-tip">Watering Tip: Select a city to receive guidance.</p>
+            <p id="sun-tip">Sunlight Tip: Select a city to receive guidance.</p>
+            <p id="wind-tip">Wind Protection Tip: Select a city to receive guidance.</p>
+            <p id="general-flower-tip">General Flower Tip: Select a city to receive guidance.</p>
+        </section>
+    </main>
+
+    <div data-include="components/footer.html"></div>
+
+    <script src="../scripts/include.min.js"></script>
+    <script src="../scripts/voting.js"></script>
+</body>
+</html>

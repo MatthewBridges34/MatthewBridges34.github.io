@@ -148,3 +148,111 @@ footer p {
     font-weight: bold;
 }
 
+.voting-intro {
+    max-width: 750px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.voting-card,
+.results-card {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#vote-message {
+    background-color: #fff8f2;
+    border: 1px solid #e7c1cf;
+    border-radius: 12px;
+    color: #6f3f5f;
+    font-weight: bold;
+    padding: 14px;
+    margin-top: 22px;
+}
+
+#results {
+    text-align: left;
+    background-color: #fffdf9;
+    border: 1px solid #e7c1cf;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 130px;
+}
+
+.bank-intro {
+    max-width: 750px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.bank-card,
+.account-card {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#account-message {
+    background-color: #fff8f2;
+    border: 1px solid #e7c1cf;
+    border-radius: 12px;
+    color: #6f3f5f;
+    font-weight: bold;
+    padding: 14px;
+    margin-top: 22px;
+}
+
+#account-output {
+    text-align: left;
+    background-color: #fffdf9;
+    border: 1px solid #e7c1cf;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 150px;
+}
+
+.weather-intro {
+    max-width: 750px;
+    margin: 0 auto 24px;
+    text-align: center;
+}
+
+.weather-card,
+.forecast-card,
+.flower-advice-card {
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.weather-card label {
+    display: block;
+    color: #6f3f5f;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#city-select {
+    padding: 10px;
+    border: 1px solid #b98aa1;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+#weather-icon {
+    max-width: 90px;
+    min-height: 60px;
+}
+
+.forecast-card p,
+.flower-advice-card p {
+    background-color: #fff8f2;
+    border: 1px solid #e7c1cf;
+    border-radius: 10px;
+    padding: 12px;
+    text-align: left;
+}

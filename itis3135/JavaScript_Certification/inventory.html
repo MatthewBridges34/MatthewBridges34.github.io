@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Path | Flower Inventory</title>
+
+    <link rel="stylesheet" href="../styles/flower.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div data-include="components/header.html"></div>
+
+<main>
+    <h2>Flower Shop Inventory</h2>
+
+    <section class="hero">
+        <h3>Petal Path Seasonal Inventory</h3>
+        <p>
+            Browse the current flower inventory available through Petal Path.
+            Each flower is listed with its quantity, price, and recommended use.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Available Flowers</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Flower</th>
+                    <th>Color</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Best Use</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Rose</td>
+                    <td>Red</td>
+                    <td>48 stems</td>
+                    <td>$2.50 each</td>
+                    <td>Romantic bouquets</td>
+                </tr>
+                <tr>
+                    <td>Tulip</td>
+                    <td>Pink</td>
+                    <td>36 stems</td>
+                    <td>$1.75 each</td>
+                    <td>Spring arrangements</td>
+                </tr>
+                <tr>
+                    <td>Sunflower</td>
+                    <td>Yellow</td>
+                    <td>24 stems</td>
+                    <td>$3.00 each</td>
+                    <td>Bright centerpieces</td>
+                </tr>
+                <tr>
+                    <td>Daisy</td>
+                    <td>White</td>
+                    <td>60 stems</td>
+                    <td>$1.25 each</td>
+                    <td>Simple garden bouquets</td>
+                </tr>
+                <tr>
+                    <td>Orchid</td>
+                    <td>Purple</td>
+                    <td>15 plants</td>
+                    <td>$12.00 each</td>
+                    <td>Elegant gifts</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h3>Inventory Notes</h3>
+
+        <ul>
+            <li>Roses and tulips should be stored in a cool area before arranging.</li>
+            <li>Sunflowers need tall containers because of their long stems.</li>
+            <li>Daisies are useful for lower-cost bouquets and casual arrangements.</li>
+            <li>Orchids require gentle handling and indirect sunlight.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h3>Restock Priorities</h3>
+
+        <p>
+            Based on current inventory, orchids and sunflowers should be restocked
+            first because they have the lowest available quantities and are often
+            used for premium arrangements.
+        </p>
+    </section>
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="../scripts/include.min.js"></script>
+<script src="../scripts/inventory.js"></script>
+
+</body>
+</html>

@@ -256,3 +256,12 @@ footer p {
     padding: 12px;
     text-align: left;
 }
+
+.card img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 12px;
+}

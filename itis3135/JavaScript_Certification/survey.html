@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petal Path | Flower Survey</title>
+
+    <link rel="stylesheet" href="../styles/flower.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div data-include="components/header.html"></div>
+
+<main>
+    <h2>Flower Preference Survey</h2>
+
+    <section class="hero">
+        <h3>Help Us Learn About Your Favorite Flowers</h3>
+        <p>
+            This short survey helps Petal Path understand which flowers,
+            arrangements, and care tips visitors enjoy the most.
+        </p>
+    </section>
+
+    <section class="card">
+        <h3>Petal Path Survey</h3>
+
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+
+            <label for="favorite-flower">Favorite Flower:</label>
+            <select id="favorite-flower" name="favorite-flower">
+                <option value="">Choose a flower</option>
+                <option value="rose">Rose</option>
+                <option value="tulip">Tulip</option>
+                <option value="sunflower">Sunflower</option>
+                <option value="daisy">Daisy</option>
+                <option value="orchid">Orchid</option>
+            </select>
+
+            <fieldset>
+                <legend>What do you usually buy flowers for?</legend>
+
+                <input type="checkbox" id="gifts" name="flower-use" value="gifts">
+                <label for="gifts">Gifts</label>
+
+                <input type="checkbox" id="home" name="flower-use" value="home">
+                <label for="home">Home decoration</label>
+
+                <input type="checkbox" id="events" name="flower-use" value="events">
+                <label for="events">Events or celebrations</label>
+
+                <input type="checkbox" id="garden" name="flower-use" value="garden">
+                <label for="garden">Gardening</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>How often do you buy flowers?</legend>
+
+                <input type="radio" id="weekly" name="frequency" value="weekly">
+                <label for="weekly">Weekly</label>
+
+                <input type="radio" id="monthly" name="frequency" value="monthly">
+                <label for="monthly">Monthly</label>
+
+                <input type="radio" id="special" name="frequency" value="special">
+                <label for="special">Only for special occasions</label>
+            </fieldset>
+
+            <label for="comments">What flower products or care tips would you like to see?</label>
+            <textarea id="comments" name="comments" placeholder="Share your ideas..."></textarea>
+
+            <button type="submit">Submit Flower Survey</button>
+        </form>
+    </section>
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="../scripts/include.min.js"></script>
+<script src="../scripts/survey.js"></script>
+
+</body>
+</html>

@@ -32,7 +32,7 @@
             <h3>Featured Flower Examples</h3>
             <div class="gallery-grid">
                 <article class="gallery-card">
-                    <img src="../images/rose.jpg" alt="A rose bloom used as an example of love, tribute, and remembrance in storytelling.">
+                    <img class="lightbox-image" src="../images/rose.jpg" alt="A rose bloom used as an example of love, tribute, and remembrance in storytelling." data-caption="Rose: love, remembrance, tribute, and public honor.">
                     <h4>Rose</h4>
                     <p>
                         Roses often suggest love, remembrance, tribute, or public honor.
@@ -41,7 +41,7 @@
                 </article>
 
                 <article class="gallery-card">
-                    <img src="../images/lily.jpg" alt="A lily flower representing peace, mourning, and reflection in visual storytelling.">
+                    <img class="lightbox-image" src="../images/lily.jpg" alt="A lily flower representing peace, mourning, and reflection in visual storytelling." data-caption="Lily: peace, mourning, and reflection.">
                     <h4>Lily</h4>
                     <p>
                         Lilies are often associated with peace, mourning, and reflection.
@@ -50,7 +50,7 @@
                 </article>
 
                 <article class="gallery-card">
-                    <img src="../images/sunflower.jpg" alt="A sunflower used to represent hope, resilience, and warmth in journalism and feature stories.">
+                    <img class="lightbox-image" src="../images/sunflower.jpg" alt="A sunflower used to represent hope, resilience, and warmth in journalism and feature stories." data-caption="Sunflower: hope, resilience, and warmth.">
                     <h4>Sunflower</h4>
                     <p>
                         Sunflowers can communicate hope, resilience, and warmth.
@@ -59,7 +59,7 @@
                 </article>
 
                 <article class="gallery-card">
-                    <img src="../images/tulip.jpg" alt="A tulip flower symbolizing renewal, seasonal change, and fresh beginnings.">
+                    <img class="lightbox-image" src="../images/tulip.jpg" alt="A tulip flower symbolizing renewal, seasonal change, and fresh beginnings." data-caption="Tulip: renewal, seasonal change, and fresh beginnings.">
                     <h4>Tulip</h4>
                     <p>
                         Tulips often symbolize renewal and seasonal change.
@@ -68,7 +68,7 @@
                 </article>
 
                 <article class="gallery-card">
-                    <img src="../images/daisy.jpg" alt="A daisy flower representing simplicity, innocence, and natural beauty.">
+                    <img class="lightbox-image" src="../images/daisy.jpg" alt="A daisy flower representing simplicity, innocence, and natural beauty." data-caption="Daisy: simplicity, innocence, and natural beauty.">
                     <h4>Daisy</h4>
                     <p>
                         Daisies suggest simplicity, innocence, and natural beauty.
@@ -77,7 +77,7 @@
                 </article>
 
                 <article class="gallery-card">
-                    <img src="../images/carnation.jpg" alt="A carnation flower used to represent gratitude, devotion, and remembrance.">
+                    <img class="lightbox-image" src="../images/carnation.jpg" alt="A carnation flower used to represent gratitude, devotion, and remembrance." data-caption="Carnation: gratitude, devotion, and remembrance.">
                     <h4>Carnation</h4>
                     <p>
                         Carnations often represent gratitude, devotion, and remembrance.
@@ -93,6 +93,21 @@
                 A flower image should be interpreted by looking at more than just the flower itself.
                 Consider the event, the setting, the color of the flower, and where it appears in the scene.
                 A flower placed at a vigil may carry a very different meaning than the same flower used in a celebration.
+            </p>
+        </section>
+
+        <!-- Dynamic Functionality #3:
+             This lightbox preview opens when users click a gallery image.
+             JavaScript will place the clicked image and its caption inside this preview box. -->
+        <section id="gallery-lightbox" class="gallery-lightbox hidden">
+            <h3>Image Preview</h3>
+
+            <button id="lightbox-close" type="button">Close Preview</button>
+
+            <img id="lightbox-image" src="../images/rose.jpg" alt="Selected flower preview">
+
+            <p id="lightbox-caption">
+                The selected flower caption will appear here.
             </p>
         </section>
 

@@ -33,6 +33,33 @@
             <h2 class="visually-hidden">Featured Flower Image</h2>
             <img src="../images/flower_meanings.png" alt="A visual representation of flower meanings and symbolism used in storytelling.">
         </section>
+
+        <!-- Dynamic Functionality #2:
+            This flower selector lets users choose a flower from a dropdown menu.
+            JavaScript will update the result box with the selected flower's meaning. -->
+        <section class="flower-selector-section">
+            <h3>Flower Meaning Selector</h3>
+            <p>
+                Choose a flower from the dropdown menu to quickly view its symbolic meaning.
+            </p>
+
+            <label for="flower-meaning-select" class="meaning-label">Select a flower:</label>
+
+            <select id="flower-meaning-select" name="flower-meaning-select">
+                <option value="">Choose a flower</option>
+                <option value="rose">Rose</option>
+                <option value="lily">Lily</option>
+                <option value="sunflower">Sunflower</option>
+                <option value="tulip">Tulip</option>
+                <option value="daisy">Daisy</option>
+                <option value="carnation">Carnation</option>
+            </select>
+
+            <div id="flower-meaning-output" class="card meaning-card">
+                <h4>Selected Flower Meaning</h4>
+                <p>Select a flower to see its meaning here.</p>
+            </div>
+        </section>
         <!-- Symbolism, color meaning, and journalism connection -->
         <section>
             <h3>Why Flower Meanings Matter</h3>

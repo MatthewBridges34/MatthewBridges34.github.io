@@ -301,3 +301,16 @@ ul li {
         font-size: 1rem;
     }
 }
+
+.flower-tip-section {
+    text-align: center;
+}
+
+.flower-tip-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f3efe8;
+    border-left: 5px solid #476c4d;
+    border-radius: 8px;
+    font-weight: bold;
+}

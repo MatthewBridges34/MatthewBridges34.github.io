@@ -315,20 +315,6 @@ ul li {
     font-weight: bold;
 }
 
-/* Flexible card layouts used across the client project pages. */
-.flower-grid,
-.gallery-grid {
-    margin-top: 1rem;
-}
-
-.flower-grid > *,
-.gallery-grid > * {
-    display: inline-block;
-    vertical-align: top;
-    min-width: 260px;
-    max-width: 32%;
-    margin: 0 1% 1.25rem 0;
-}
 
 /* Flower meaning dropdown styling. */
 #flower-meaning-select {
